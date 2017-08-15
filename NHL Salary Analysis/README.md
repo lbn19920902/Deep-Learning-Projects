@@ -1,17 +1,13 @@
-# Cap-Friendly-Scraper
-This is my attempt at creating a scraper for the CapFriendly site before I move on to scraping NHL PxP data
-This program will only scrape 2017 data although it could be easily modified to scrape other years
+# NHL Salary Analysis
 
-My name is Matthew Barlowe and I am learning Python so my code will be rough
-Any suggestions and improvements will be greatly appreciated
+1. I ran a scraper for the CapFriendly and made a data set that contains salary and various statistics including team, opponents and players.
 
-Version 1
-Simple Scraper to pull data from only one year
+2. I ran lasso regression to see which variables are important to predict salary.
+The following are the important variables among all the variables.
 
-Version 2.0
-Scraper code updated to include code defined by functions and clearly commented to actual code of the program is three lines long.
+['AGE', 'year', 'GP', 'GF', 'Opp GA60', 'SF', 'Sh%', 'TM Sv%', 'Sv% Rel', 'Opp Sh%',
 
-Program now takes input from the user and scrapes multiple years from CapFriendly at one time.  
+'CA60 RelTM', 'TM CSh%', 'Opp CSh%', 'Opp CSv%', '%ofTeam OZFO', '%ofTeam DZFO', '%ofTeam NZFO', 'FirstA', 'Pts', 'Pri. Pts', 'iCorsi', 'NZFO']
 
-Version 3.0
-Scraper now will write data to csv file and then to a Google Sheets file.  As of right now it writes to separate Google Sheets file.  In next version hope to have only one google sheet file with separate worksheets for each year and add code to update existing spreadsheets instead of creating new ones each time
+3. I ran deep learning model based on these important variables. I am able to predict salary with an error rate of about 1.0 million.
+
